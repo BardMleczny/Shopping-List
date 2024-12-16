@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingList.Views.FileChoice"
+             Title="FileChoice">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label Text="Choose an option:"
+               FontSize="20"
+               HorizontalOptions="Center" />
+        <Button Text="Use Base XMLs"
+                Clicked="OnUseBaseXmlsClicked" />
+        <Button Text="Import Products XML"
+                Clicked="OnImportProductsXmlClicked" />
+    </VerticalStackLayout>
+</ContentPage>

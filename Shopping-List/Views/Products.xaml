@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingList.Views.Products"
+             Title="Products">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="AddClicked" 
+                     IconImageSource="{FontImage Glyph='+', Color=Black, Size=22}" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="10">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Picker x:Name="ShopFilterPicker" Title="Filter by Shop" 
+                    SelectedIndexChanged="OnFilterChanged"/>
+            <Switch x:Name="NotBoughtSwitch" Toggled="OnFilterChanged"/>
+            <Label Text="Show Not Bought" VerticalTextAlignment="Center" />
+        </StackLayout>
+
+        <CollectionView x:Name="ProductsCollectionView" 
+                        IsGrouped="True"
+                        ItemsSource="{Binding Products}">
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Name}" 
+                           FontAttributes="Bold" 
+                           BackgroundColor="#f0f0f0"
+                           Padding="5"/>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="5">
+                        <Label Text="{Binding Name}" FontSize="16" />
+                        <Button Text="+"
+                                Clicked="PlusClicked"/>
+                        <Label Text="{Binding Value}"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               FontSize="30"/>
+                        <Button Text="-"
+                                Clicked="MinusClicked"/>
+                        <CheckBox IsChecked="{Binding IsBought}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

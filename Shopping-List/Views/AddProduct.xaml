@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingList.Views.AddProduct"
+             Title="Add Product">
+    <VerticalStackLayout Spacing="10" Margin="5">
+        <Editor x:Name="ProductName"
+                MaxLength="30"
+                HorizontalTextAlignment="Center"
+                Placeholder="Enter your product name"
+                TextChanged="OnValueChanged"
+                HeightRequest="40" />
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button Text="-" Clicked="OnDecreaseClicked" WidthRequest="40" />
+            <Entry x:Name="CounterValue"
+                   Keyboard="Numeric"
+                   MaxLength="9"
+                   HorizontalTextAlignment="Center"
+                   Placeholder="Enter count"
+                   TextChanged="OnNumberValueChanged"
+                   WidthRequest="100" />
+            <Button Text="+" Clicked="OnIncreaseClicked" WidthRequest="40" />
+        </HorizontalStackLayout>
+
+        <Label Text="Select a unit" HorizontalTextAlignment="Center" />
+        <Picker x:Name="UnitPicker" 
+        HorizontalTextAlignment="Center"
+        SelectedIndexChanged="OnUnitChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>psc</x:String>
+                    <x:String>kg</x:String>
+                    <x:String>l</x:String>
+                    <x:String>+</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        
+        <Label Text="Select a category" HorizontalTextAlignment="Center" />
+        <Picker x:Name="CategoryPicker" 
+        HorizontalTextAlignment="Center"
+        SelectedIndexChanged="OnCategoryChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>diary</x:String>
+                    <x:String>meat</x:String>
+                    <x:String>fruits</x:String>
+                    <x:String>vegetables</x:String>
+                    <x:String>+</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Select a shop" HorizontalTextAlignment="Center" />
+        <Picker x:Name="ShopPicker"
+                HorizontalTextAlignment="Center"
+                SelectedIndexChanged="OnShopChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Shop A</x:String>
+                    <x:String>Shop B</x:String>
+                    <x:String>+</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <CheckBox x:Name="OptionalCheckBox" />
+            <Label Text="Is this product optional?"
+                   VerticalTextAlignment="Center"
+                   FontSize="16" />
+        </HorizontalStackLayout>
+
+        <Button Text="Save" Clicked="OnSaveClicked" />
+
+        <Label x:Name="ErrorMessage"
+               FontSize="35"
+               FontFamily="Impact"
+               HorizontalTextAlignment="Center"
+               TextColor="Red"
+               Text="PLEASE FILL ALL THE FIELDS"
+               IsVisible="False"/>
+
+    </VerticalStackLayout>
+</ContentPage>
