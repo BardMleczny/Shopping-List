@@ -8,12 +8,12 @@ namespace ShoppingList.Views
 {
     public partial class ProductContentView : ContentView
     {
-        string oldCountText = "";
+        public Action OnProductBoughtChanged { get; set; }
+
         private Product _product;
         public ProductContentView()
         {
             InitializeComponent();
-            OnCountChanged(ProductCount, null);
         }
 
         public ProductContentView(Product product)
@@ -23,46 +23,25 @@ namespace ShoppingList.Views
             _product = product;
 
             ProductNameLabel.Text = product.Name;
-            ProductDetailsLabel.Text = $"{product.Shop} - " + (product.IsOptional ? "opcjonalny" : "obowi¹zkowy");
-            ProductCount.Text = $"{product.Count} {product.Unit}";
+            ProductDetailsLabel.Text = $"{product.Shop} - " + (product.IsOptional ? "optional" : "mandatory");
             BoughtCheckBox.IsChecked = product.IsBought;
+            UpdateUI();
         }
 
         private void OnCountChanged(object sender, EventArgs e)
         {
             if (sender is Entry entry)
             {
+                string countTextCopy = entry.Text;
                 int index = 0;
-                foreach (char c in entry.Text)
-                {
-                    int dotCount = 0;
-                    foreach (char stringIterator in entry.Text)
-                    {
-                        if (stringIterator == '.')
-                            dotCount++;
-                    }
-                    if (dotCount >= 2)
-                    {
-                        if (!char.IsDigit(c))
-                            entry.Text = entry.Text.Remove(index, 1);
-                    }
-                    else
-                    {
-                        if (!char.IsDigit(c) && c != '.')
-                            entry.Text = entry.Text.Remove(index, 1);
-                    }
 
-                    index++;
-                }
-                
-                _product.Count = float.Parse(string.Concat(entry.Text.Where(char.IsDigit)));
-
-                string newCountText = $"{_product.Count} {_product.Unit}";
-                if (newCountText != oldCountText)
+                for (int i = 0; i < countTextCopy.Length; i++)
                 {
-                    oldCountText = newCountText;
-                    ProductCount.Text = newCountText;
+                    if(!(countTextCopy[i] == ',' || char.IsNumber(countTextCopy[i])))
+                        countTextCopy = countTextCopy.Remove(i);
                 }
+
+                _product.Count = float.Parse(countTextCopy);
             }
 
             UpdateProductInXml();
@@ -88,7 +67,12 @@ namespace ShoppingList.Views
         private void OnBoughtChanged(object sender, CheckedChangedEventArgs e)
         {
             _product.IsBought = e.Value;
+
+            UpdateUI();
             UpdateProductInXml();
+
+
+            OnProductBoughtChanged?.Invoke();
         }
 
         private void OnDeleteClicked(object sender, EventArgs e)
@@ -100,29 +84,25 @@ namespace ShoppingList.Views
         private void UpdateUI()
         {
             string newCountText = $"{_product.Count} {_product.Unit}";
-            oldCountText = newCountText;
             ProductCount.Text = newCountText;
+
+            if (_product.IsBought)
+                ProductLayout.BackgroundColor = new Color(.25f);
+            else
+                ProductLayout.BackgroundColor = Colors.LightGray;
         }
 
         private void UpdateProductInXml()
         {
-            try
-            {
-                var document = XDocument.Load(FileChoice.productsFilePath);
+            var document = XDocument.Load(FileChoice.productsFilePath);
+            var productElement = document.Descendants("Product")
+                .FirstOrDefault(p => (string)p.Element("Name") == _product.Name && (string)p.Element("Shop") == _product.Shop);
 
-                var productElement = document.Root.Elements("Product")
-                    .FirstOrDefault(p => (string)p.Element("Name") == _product.Name && (string)p.Element("Shop") == _product.Shop);
-
-                if (productElement != null)
-                {
-                    productElement.SetElementValue("Value", _product.Count);
-                    productElement.SetElementValue("IsBought", _product.IsBought);
-                    document.Save(FileChoice.productsFilePath);
-                }
-            }
-            catch (Exception ex)
+            if (productElement != null)
             {
-                Console.WriteLine($"Error updating product in XML: {ex.Message}");
+                productElement.SetElementValue("Value", _product.Count);
+                productElement.SetElementValue("IsBought", _product.IsBought);
+                document.Save(FileChoice.productsFilePath);
             }
         }
 

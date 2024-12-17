@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingList.Views.ProductsFromShop"
+             Title="ProductsFromShop">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                         Clicked="AddClicked"
+                         IconImageSource="{FontImage Glyph='+', Color=Black, Size=22}"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <VerticalStackLayout>
+            <HorizontalStackLayout>
+                <Picker x:Name="ShopPicker"
+                        HorizontalTextAlignment="Center">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Filter" Clicked="OnFilterClicked"/>
+            </HorizontalStackLayout>
+            <StackLayout x:Name="ProductsStackLayout" Padding="10"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

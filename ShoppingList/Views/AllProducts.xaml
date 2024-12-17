@@ -7,9 +7,17 @@
         <ToolbarItem Text="Add"
              Clicked="AddClicked"
              IconImageSource="{FontImage Glyph='+', Color=Black, Size=22}"/>
+        <ToolbarItem Text="Export"
+                     Clicked="ExportClicked"/>
     </ContentPage.ToolbarItems>
     <ScrollView>
-        <StackLayout x:Name="CategoriesStackLayout" Padding="10">
-        </StackLayout>
+        <VerticalStackLayout>
+            <HorizontalStackLayout>
+                <Button Text="Select products to buy" Clicked="OnToBuyClicked"/>
+                <Button Text="Select products from a shop" Clicked="OnShopClicked"/>
+            </HorizontalStackLayout>
+            <StackLayout x:Name="CategoriesStackLayout" Padding="10"/>
+        </VerticalStackLayout>
     </ScrollView>
+    
 </ContentPage>

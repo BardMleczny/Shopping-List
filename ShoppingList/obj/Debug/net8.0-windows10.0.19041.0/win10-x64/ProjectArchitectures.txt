@@ -1,1 +1,1 @@
-C:\Users\Dominik\source\repos\ShoppingList\ShoppingList\ShoppingList.csproj;x64
+C:\Users\Dominik\Documents\GitHub\Shopping-List\ShoppingList\ShoppingList.csproj;x64

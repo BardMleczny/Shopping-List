@@ -14,6 +14,12 @@
         Title="All Products"
         ContentTemplate="{DataTemplate views:AllProducts}" />
     <ShellContent
+        Title="All Products"
+        ContentTemplate="{DataTemplate views:ProductsToBuy}" />
+    <ShellContent
+        Title="All Products"
+        ContentTemplate="{DataTemplate views:ProductsFromShop}" />
+    <ShellContent
         Title="Add Product"
         ContentTemplate="{DataTemplate views:AddProduct}" />
 

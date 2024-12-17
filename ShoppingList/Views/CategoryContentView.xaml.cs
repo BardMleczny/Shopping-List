@@ -43,7 +43,7 @@ namespace ShoppingList.Views
 
             products.ForEach(product =>
             {
-                ProductContentView productContentView = new ProductContentView(product);
+                ProductContentView productContentView = new (product);
                 CategoryStackLayout.Children.Add(productContentView);
             });
         }

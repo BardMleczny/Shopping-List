@@ -29,10 +29,6 @@
         SelectedIndexChanged="OnUnitChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>psc</x:String>
-                    <x:String>kg</x:String>
-                    <x:String>l</x:String>
-                    <x:String>+</x:String>
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
@@ -43,11 +39,6 @@
         SelectedIndexChanged="OnCategoryChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>diary</x:String>
-                    <x:String>meat</x:String>
-                    <x:String>fruits</x:String>
-                    <x:String>vegetables</x:String>
-                    <x:String>+</x:String>
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
@@ -58,9 +49,6 @@
                 SelectedIndexChanged="OnShopChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>Shop A</x:String>
-                    <x:String>Shop B</x:String>
-                    <x:String>+</x:String>
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>

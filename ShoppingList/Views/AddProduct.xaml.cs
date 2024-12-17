@@ -46,22 +46,19 @@ namespace ShoppingList.Views
             }
 
             var doc = XDocument.Load(FileChoice.dataFilePath);
-            var units = doc.Root.Element("Units")
-                                ?.Elements("Unit")
+            var units = doc.Root.Descendants("Unit")
                                 .Select(x => x.Value)
                                 .ToList();
             if (units != null)
                 UnitPicker.ItemsSource = units;
 
-            var categories = doc.Root.Element("Categories")
-                                ?.Elements("Category")
+            var categories = doc.Root.Descendants("Category")
                                 .Select(x => x.Value)
                                 .ToList();
             if (categories != null)
                 CategoryPicker.ItemsSource = categories;
 
-            var shops = doc.Root.Element("Shops")
-                                ?.Elements("Shop")
+            var shops = doc.Root.Descendants("Shop")
                                 .Select(x => x.Value)
                                 .ToList();
             if (shops != null)
@@ -149,7 +146,7 @@ namespace ShoppingList.Views
                     int dotCount = 0;
                     foreach (char stringIterator in entry.Text)
                     {
-                        if (stringIterator == '.')
+                        if (stringIterator == ',')
                             dotCount++;
                     }
                     if (dotCount >= 2)
@@ -159,7 +156,7 @@ namespace ShoppingList.Views
                     }
                     else
                     {
-                        if (!char.IsDigit(c) && c != '.')
+                        if (!char.IsDigit(c) && c != ',')
                             entry.Text = entry.Text.Remove(index, 1);
                     }
                         

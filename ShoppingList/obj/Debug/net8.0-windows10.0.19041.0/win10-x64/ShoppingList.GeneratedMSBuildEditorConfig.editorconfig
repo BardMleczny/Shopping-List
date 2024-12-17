@@ -8,7 +8,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ShoppingList
-build_property.ProjectDir = C:\Users\Dominik\source\repos\ShoppingList\ShoppingList\
+build_property.ProjectDir = C:\Users\Dominik\Documents\GitHub\Shopping-List\ShoppingList\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTAotOptimizerEnabled = true
@@ -19,56 +19,68 @@ build_property.CsWinRTCcwLookupTableGeneratorEnabled = true
 build_property.CsWinRTMergeReferencedActivationFactories = 
 build_property.CsWinRTAotWarningLevel = 
 
-[C:/Users/Dominik/source/repos/ShoppingList/ShoppingList/App.xaml]
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Dominik/source/repos/ShoppingList/ShoppingList/AppShell.xaml]
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Dominik/source/repos/ShoppingList/ShoppingList/Resources/Styles/Colors.xaml]
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Dominik/source/repos/ShoppingList/ShoppingList/Resources/Styles/Styles.xaml]
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/Dominik/source/repos/ShoppingList/ShoppingList/Views/AddProduct.xaml]
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/Views/AddProduct.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.Views.AddProduct.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AddProduct.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AddProduct.xaml
 
-[C:/Users/Dominik/source/repos/ShoppingList/ShoppingList/Views/AllProducts.xaml]
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/Views/AllProducts.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.Views.AllProducts.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AllProducts.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AllProducts.xaml
 
-[C:/Users/Dominik/source/repos/ShoppingList/ShoppingList/Views/CategoryContentView.xaml]
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/Views/CategoryContentView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.Views.CategoryContentView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\CategoryContentView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CategoryContentView.xaml
 
-[C:/Users/Dominik/source/repos/ShoppingList/ShoppingList/Views/FileChoice.xaml]
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/Views/FileChoice.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.Views.FileChoice.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\FileChoice.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\FileChoice.xaml
 
-[C:/Users/Dominik/source/repos/ShoppingList/ShoppingList/Views/ProductItemView.xaml]
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/Views/ProductItemView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.Views.ProductItemView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ProductItemView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ProductItemView.xaml
+
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/Views/ProductsFromShop.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.Views.ProductsFromShop.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ProductsFromShop.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ProductsFromShop.xaml
+
+[C:/Users/Dominik/Documents/GitHub/Shopping-List/ShoppingList/Views/ProductsToBuy.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShoppingList.Views.ProductsToBuy.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ProductsToBuy.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ProductsToBuy.xaml

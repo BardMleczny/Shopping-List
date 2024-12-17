@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dominik\\source\\repos\\ShoppingList\\ShoppingList\\ShoppingList.csproj": {}
+    "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\ShoppingList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dominik\\source\\repos\\ShoppingList\\ShoppingList\\ShoppingList.csproj": {
+    "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\ShoppingList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dominik\\source\\repos\\ShoppingList\\ShoppingList\\ShoppingList.csproj",
+        "projectUniqueName": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\ShoppingList.csproj",
         "projectName": "ShoppingList",
-        "projectPath": "C:\\Users\\Dominik\\source\\repos\\ShoppingList\\ShoppingList\\ShoppingList.csproj",
+        "projectPath": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\ShoppingList.csproj",
         "packagesPath": "C:\\Users\\Dominik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dominik\\source\\repos\\ShoppingList\\ShoppingList\\obj\\",
+        "outputPath": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
@@ -66,6 +66,10 @@
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[9.1.1, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -109,6 +113,10 @@
         "net8.0-ios18.0": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[9.1.1, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -152,6 +160,10 @@
         "net8.0-maccatalyst18.0": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[9.1.1, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -196,6 +208,10 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[9.1.1, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"

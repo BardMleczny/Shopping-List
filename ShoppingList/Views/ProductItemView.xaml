@@ -3,34 +3,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShoppingList.Views.ProductContentView"
              Padding="10">
-    <VerticalStackLayout Spacing="10" BackgroundColor="LightGray" Padding="10">
-        <VerticalStackLayout>
-            <Label x:Name="ProductNameLabel"
+    <Frame Margin="5" 
+           BorderColor="Black" 
+           x:Name="ProductLayout"
+           BackgroundColor="LightGray" 
+           CornerRadius="5">
+        <VerticalStackLayout Spacing="10" 
+                             Padding="10">
+            <VerticalStackLayout>
+                <Label x:Name="ProductNameLabel"
                    FontAttributes="Bold"
                    FontSize="18" />
-            <Label x:Name="ProductDetailsLabel"
+                <Label x:Name="ProductDetailsLabel"
                    FontSize="14" />
-        </VerticalStackLayout>
+            </VerticalStackLayout>
 
-        <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Fill">
-            <Button Text="-" Clicked="OnDecreaseClicked" WidthRequest="40" />
+            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Fill">
+                <Button Text="-" 
+                    Clicked="OnDecreaseClicked" 
+                    WidthRequest="40" />
 
-            <Entry x:Name="ProductCount"
+                <Entry x:Name="ProductCount"
                    TextChanged="OnCountChanged"
                    FontSize="18"
                    VerticalOptions="Center"
                    HorizontalOptions="CenterAndExpand" />
 
-            <Button Text="+" Clicked="OnIncreaseClicked" WidthRequest="40" />
-        </HorizontalStackLayout>
+                <Button Text="+" 
+                    Clicked="OnIncreaseClicked" 
+                    WidthRequest="40" />
+            </HorizontalStackLayout>
 
-        <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Fill">
-            <CheckBox x:Name="BoughtCheckBox"
+            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Fill">
+                <CheckBox x:Name="BoughtCheckBox"
                       VerticalOptions="Center"
                       CheckedChanged="OnBoughtChanged" />
-            <Label Text="Bought" VerticalOptions="Center" />
-        </HorizontalStackLayout>
+                <Label Text="Bought" VerticalOptions="Center" />
+            </HorizontalStackLayout>
 
-        <Button Text="Delete" Clicked="OnDeleteClicked" BackgroundColor="Red" TextColor="White" />
-    </VerticalStackLayout>
+            <Button Text="Delete" 
+                Clicked="OnDeleteClicked" 
+                BackgroundColor="#BB0022" 
+                TextColor="White" />
+        </VerticalStackLayout>
+    </Frame>
 </ContentView>
