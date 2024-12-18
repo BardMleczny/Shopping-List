@@ -58,14 +58,17 @@ public partial class ProductsFromShop : ContentPage
 
         switch(SortingPicker.SelectedIndex)
         {
+            case -1:
+                sortedProducts = unSortedProducts.OrderBy(c => c.IsBought).ThenBy(c => c.Category);
+                break;
             case 0:
-                sortedProducts = unSortedProducts.OrderBy(c => c.Category);
+                sortedProducts = unSortedProducts.OrderBy(c => c.IsBought).ThenBy(c => c.Category);
                 break; 
             case 1:
-                sortedProducts = unSortedProducts.OrderBy(c => c.Name);
+                sortedProducts = unSortedProducts.OrderBy(c => c.IsBought).ThenBy(c => c.Name);
                 break;
             case 2:
-                sortedProducts = unSortedProducts.OrderBy(c => c.Count);
+                sortedProducts = unSortedProducts.OrderBy(c => c.IsBought).ThenBy(c => c.Count);
                 break;
         }
 
@@ -76,6 +79,7 @@ public partial class ProductsFromShop : ContentPage
         foreach (Product product in products)
         {
             ProductContentView productView = new (product);
+            productView.OnProductBoughtChanged = LoadProducts;
             ProductsStackLayout.Children.Add(productView);
         }
     }

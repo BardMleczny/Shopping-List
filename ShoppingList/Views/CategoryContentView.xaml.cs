@@ -39,12 +39,16 @@ namespace ShoppingList.Views
                                         isBought: bool.Parse(product.Element("IsBought")?.Value ?? "false")
                                     ))
                                     .Where(c => c.Category == category.Name)
+                                    .OrderBy(c => c.IsBought)
                                     .ToList();
+
+            CategoryStackLayout.Children.Clear();
 
             products.ForEach(product =>
             {
-                ProductContentView productContentView = new (product);
-                CategoryStackLayout.Children.Add(productContentView);
+                ProductContentView productView = new (product);
+                productView.OnProductBoughtChanged = LoadProducts;
+                CategoryStackLayout.Children.Add(productView);
             });
 
             if(CategoryStackLayout.Children.Count == 0)

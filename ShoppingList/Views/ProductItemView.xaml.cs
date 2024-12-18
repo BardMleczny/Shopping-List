@@ -40,7 +40,8 @@ namespace ShoppingList.Views
                     if(!(countTextCopy[i] == ',' || char.IsNumber(countTextCopy[i])))
                         countTextCopy = countTextCopy.Remove(i);
                 }
-
+                if (countTextCopy.Length == 0)
+                    countTextCopy = "0";
                 _product.Count = float.Parse(countTextCopy);
             }
 

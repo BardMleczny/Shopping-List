@@ -36,7 +36,7 @@
                        HorizontalOptions="CenterAndExpand"
                        BackgroundColor="#f7f7f7"
                        TextColor="#333333"
-                       WidthRequest="60"
+                       WidthRequest="200"
                        Keyboard="Numeric" />
                 <Button Text="+"
                         Clicked="OnIncreaseClicked"

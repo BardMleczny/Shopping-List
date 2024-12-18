@@ -28,7 +28,7 @@
                    HorizontalTextAlignment="Center"
                    Placeholder="Enter count"
                    TextChanged="OnNumberValueChanged"
-                   WidthRequest="100"
+                   WidthRequest="200"
                    FontSize="16"
                    BackgroundColor="White"
                    TextColor="#333333" />
