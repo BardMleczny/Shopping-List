@@ -2,73 +2,102 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShoppingList.Views.AddProduct"
-             Title="Add Product">
-    <VerticalStackLayout Spacing="10" Margin="5">
+             Title="Add Product"
+             BackgroundColor="#f7f7f7">
+    <VerticalStackLayout Spacing="15" Padding="20">
         <Editor x:Name="ProductName"
                 MaxLength="30"
                 HorizontalTextAlignment="Center"
                 Placeholder="Enter your product name"
                 TextChanged="OnValueChanged"
-                HeightRequest="40" />
+                HeightRequest="40"
+                BackgroundColor="White"
+                FontSize="16"
+                TextColor="#333333" />
 
-        <HorizontalStackLayout HorizontalOptions="Center">
-            <Button Text="-" Clicked="OnDecreaseClicked" WidthRequest="40" />
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <Button Text="-" 
+                    Clicked="OnDecreaseClicked"
+                    WidthRequest="40"
+                    BackgroundColor="#e0e0e0"
+                    TextColor="#333333"
+                    CornerRadius="20" />
             <Entry x:Name="CounterValue"
                    Keyboard="Numeric"
                    MaxLength="9"
                    HorizontalTextAlignment="Center"
                    Placeholder="Enter count"
                    TextChanged="OnNumberValueChanged"
-                   WidthRequest="100" />
-            <Button Text="+" Clicked="OnIncreaseClicked" WidthRequest="40" />
+                   WidthRequest="100"
+                   FontSize="16"
+                   BackgroundColor="White"
+                   TextColor="#333333" />
+            <Button Text="+" 
+                    Clicked="OnIncreaseClicked"
+                    WidthRequest="40"
+                    BackgroundColor="#e0e0e0"
+                    TextColor="#333333"
+                    CornerRadius="20" />
         </HorizontalStackLayout>
 
-        <Label Text="Select a unit" HorizontalTextAlignment="Center" />
-        <Picker x:Name="UnitPicker" 
-        HorizontalTextAlignment="Center"
-        SelectedIndexChanged="OnUnitChanged">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        
-        <Label Text="Select a category" HorizontalTextAlignment="Center" />
-        <Picker x:Name="CategoryPicker" 
-        HorizontalTextAlignment="Center"
-        SelectedIndexChanged="OnCategoryChanged">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-
-        <Label Text="Select a shop" HorizontalTextAlignment="Center" />
-        <Picker x:Name="ShopPicker"
+        <Label Text="Select a unit" 
+               HorizontalTextAlignment="Center" 
+               FontSize="16"
+               FontAttributes="Bold" />
+        <Picker x:Name="UnitPicker"
+                Title="Choose a unit"
                 HorizontalTextAlignment="Center"
-                SelectedIndexChanged="OnShopChanged">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        
+                SelectedIndexChanged="OnUnitChanged"
+                FontSize="16"
+                BackgroundColor="White"
+                TextColor="#333333" />
+
+        <Label Text="Select a category"
+               HorizontalTextAlignment="Center"
+               FontSize="16"
+               FontAttributes="Bold" />
+        <Picker x:Name="CategoryPicker"
+                Title="Choose a category"
+                HorizontalTextAlignment="Center"
+                SelectedIndexChanged="OnCategoryChanged"
+                FontSize="16"
+                BackgroundColor="White"
+                TextColor="#333333" />
+
+        <Label Text="Select a shop"
+               HorizontalTextAlignment="Center"
+               FontSize="16"
+               FontAttributes="Bold" />
+        <Picker x:Name="ShopPicker"
+                Title="Choose a shop"
+                HorizontalTextAlignment="Center"
+                SelectedIndexChanged="OnShopChanged"
+                FontSize="16"
+                BackgroundColor="White"
+                TextColor="#333333" />
+
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
             <CheckBox x:Name="OptionalCheckBox" />
             <Label Text="Is this product optional?"
                    VerticalTextAlignment="Center"
-                   FontSize="16" />
+                   FontSize="16"
+                   TextColor="#333333" />
         </HorizontalStackLayout>
 
-        <Button Text="Save" Clicked="OnSaveClicked" />
+        <Button Text="Save"
+                Clicked="OnSaveClicked"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                FontSize="16"
+                CornerRadius="10"
+                Padding="10" />
 
         <Label x:Name="ErrorMessage"
-               FontSize="35"
-               FontFamily="Impact"
+               FontSize="16"
+               FontAttributes="Bold"
                HorizontalTextAlignment="Center"
                TextColor="Red"
                Text="PLEASE FILL ALL THE FIELDS"
-               IsVisible="False"/>
-
+               IsVisible="False" />
     </VerticalStackLayout>
 </ContentPage>

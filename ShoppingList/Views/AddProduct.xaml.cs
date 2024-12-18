@@ -16,35 +16,6 @@ namespace ShoppingList.Views
 
         private async void LoadData()
         {
-            if (!File.Exists(FileChoice.dataFilePath))
-            {
-                var initialDoc = new XDocument(
-                    new XDeclaration("1.0", "utf-8", "yes"),
-                    new XElement("Data",
-                        new XElement("Units",
-                            new XElement("Unit", "psc"),
-                            new XElement("Unit", "kg"),
-                            new XElement("Unit", "l"),
-                            new XElement("Unit", "+")
-                        ),
-                        new XElement("Categories",
-                            new XElement("Category", "diary"),
-                            new XElement("Category", "meat"),
-                            new XElement("Category", "fruits"),
-                            new XElement("Category", "vegetables"),
-                            new XElement("Category", "+")
-                        ),
-                        new XElement("Shops",
-                            new XElement("Shop", "Biedronka"),
-                            new XElement("Shop", "Lidl"),
-                            new XElement("Shop", "+")
-                        )
-                    )
-                );
-
-                initialDoc.Save(FileChoice.dataFilePath);
-            }
-
             var doc = XDocument.Load(FileChoice.dataFilePath);
             var units = doc.Root.Descendants("Unit")
                                 .Select(x => x.Value)

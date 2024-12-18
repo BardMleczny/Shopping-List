@@ -3,10 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ShoppingList.Views"
              x:Class="ShoppingList.Views.CategoryContentView">
-    <Frame Margin="5" Padding="10" BorderColor="Gray" CornerRadius="5">
-        <VerticalStackLayout>
-            <Label x:Name="CategoryLabel" Text="{Binding Name}" FontSize="20" FontAttributes="Bold" TextColor="Black" />
-            <VerticalStackLayout x:Name="CategoryStackLayout" />
+    <Frame Margin="10"
+           Padding="15"
+           BorderColor="#cccccc"
+           CornerRadius="10"
+           HasShadow="True"
+           BackgroundColor="White"
+           x:Name="ContentView">
+        <VerticalStackLayout Spacing="10">
+            <Label x:Name="CategoryLabel"
+                   Text="{Binding Name}"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="#333333" />
+
+            <VerticalStackLayout x:Name="CategoryStackLayout" Spacing="5" />
         </VerticalStackLayout>
     </Frame>
 </ContentView>

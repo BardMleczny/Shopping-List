@@ -2,22 +2,44 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShoppingList.Views.AllProducts"
-             Title="All Products">
+             Title="All Products"
+             BackgroundColor="#f7f7f7">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add"
-             Clicked="AddClicked"
-             IconImageSource="{FontImage Glyph='+', Color=Black, Size=22}"/>
+                     Clicked="AddClicked"
+                     IconImageSource="{FontImage Glyph='+', Color=Black, Size=22}" />
         <ToolbarItem Text="Export"
-                     Clicked="ExportClicked"/>
+                     Clicked="ExportClicked" />
     </ContentPage.ToolbarItems>
+
     <ScrollView>
-        <VerticalStackLayout>
-            <HorizontalStackLayout>
-                <Button Text="Select products to buy" Clicked="OnToBuyClicked"/>
-                <Button Text="Select products from a shop" Clicked="OnShopClicked"/>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <HorizontalStackLayout Spacing="15">
+                <Button Text="Select Products to Buy"
+                        Clicked="OnToBuyClicked"
+                        BackgroundColor="#4CAF50"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Padding="10"
+                        FontSize="16"
+                        HorizontalOptions="FillAndExpand" />
+                <Button Text="Select Products from a Shop"
+                        Clicked="OnShopClicked"
+                        BackgroundColor="#2196F3"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Padding="10"
+                        FontSize="16"
+                        HorizontalOptions="FillAndExpand" />
             </HorizontalStackLayout>
-            <StackLayout x:Name="CategoriesStackLayout" Padding="10"/>
+
+            <StackLayout x:Name="CategoriesStackLayout" Padding="10">
+                <Label Text="Categories:"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       HorizontalOptions="Start" />
+            </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
-    
 </ContentPage>

@@ -3,48 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShoppingList.Views.ProductContentView"
              Padding="10">
-    <Frame Margin="5" 
-           BorderColor="Black" 
-           x:Name="ProductLayout"
-           BackgroundColor="LightGray" 
-           CornerRadius="5">
-        <VerticalStackLayout Spacing="10" 
-                             Padding="10">
+    <Frame Margin="10"
+           BorderColor="#cccccc"
+           BackgroundColor="White"
+           CornerRadius="10"
+           HasShadow="True"
+           x:Name="ProductLayout">
+        <VerticalStackLayout Spacing="15" Padding="15">
             <VerticalStackLayout>
                 <Label x:Name="ProductNameLabel"
-                   FontAttributes="Bold"
-                   FontSize="18" />
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       TextColor="#333333" />
                 <Label x:Name="ProductDetailsLabel"
-                   FontSize="14" />
+                       FontSize="16"
+                       TextColor="#666666" />
             </VerticalStackLayout>
 
-            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Fill">
-                <Button Text="-" 
-                    Clicked="OnDecreaseClicked" 
-                    WidthRequest="40" />
-
+            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Fill" Spacing="10">
+                <Button Text="−"
+                        Clicked="OnDecreaseClicked"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        FontSize="18"
+                        BackgroundColor="#e0e0e0"
+                        TextColor="#333333"
+                        CornerRadius="20" />
                 <Entry x:Name="ProductCount"
-                   TextChanged="OnCountChanged"
-                   FontSize="18"
-                   VerticalOptions="Center"
-                   HorizontalOptions="CenterAndExpand" />
-
-                <Button Text="+" 
-                    Clicked="OnIncreaseClicked" 
-                    WidthRequest="40" />
+                       TextChanged="OnCountChanged"
+                       FontSize="18"
+                       VerticalOptions="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       BackgroundColor="#f7f7f7"
+                       TextColor="#333333"
+                       WidthRequest="60"
+                       Keyboard="Numeric" />
+                <Button Text="+"
+                        Clicked="OnIncreaseClicked"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        FontSize="18"
+                        BackgroundColor="#e0e0e0"
+                        TextColor="#333333"
+                        CornerRadius="20" />
             </HorizontalStackLayout>
 
-            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Fill">
+            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Fill" Spacing="10">
                 <CheckBox x:Name="BoughtCheckBox"
-                      VerticalOptions="Center"
-                      CheckedChanged="OnBoughtChanged" />
-                <Label Text="Bought" VerticalOptions="Center" />
+                          VerticalOptions="Center"
+                          CheckedChanged="OnBoughtChanged" />
+                <Label Text="Bought"
+                       VerticalOptions="Center"
+                       FontSize="16"
+                       TextColor="#333333" />
             </HorizontalStackLayout>
 
-            <Button Text="Delete" 
-                Clicked="OnDeleteClicked" 
-                BackgroundColor="#BB0022" 
-                TextColor="White" />
+            <Button Text="Delete"
+                    Clicked="OnDeleteClicked"
+                    BackgroundColor="#FF4C4C"
+                    TextColor="White"
+                    FontSize="16"
+                    CornerRadius="10"
+                    Padding="10" />
         </VerticalStackLayout>
     </Frame>
 </ContentView>

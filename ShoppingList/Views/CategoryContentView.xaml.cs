@@ -46,6 +46,9 @@ namespace ShoppingList.Views
                 ProductContentView productContentView = new (product);
                 CategoryStackLayout.Children.Add(productContentView);
             });
+
+            if(CategoryStackLayout.Children.Count == 0)
+                ContentView.IsVisible = false;
         }
     }
 }
