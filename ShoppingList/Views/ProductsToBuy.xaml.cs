@@ -17,10 +17,15 @@ public partial class ProductsToBuy : ContentPage
         await Shell.Current.GoToAsync(nameof(AddProduct));
     }
 
+    private void OnSortingChanged(object sender, EventArgs e)
+    {
+        LoadProducts();
+    }
+
     public void LoadProducts()
     {
 
-        var products = XDocument.Load(FileChoice.productsFilePath).Descendants("Product")
+        var unSortedProducts = XDocument.Load(FileChoice.productsFilePath).Descendants("Product")
                                                                     .Select(product => new Product(
                                                                         name: product.Element("Name")?.Value,
                                                                         value: float.Parse(product.Element("Value")?.Value ?? "0"),
@@ -30,9 +35,24 @@ public partial class ProductsToBuy : ContentPage
                                                                         isOptional: bool.Parse(product.Element("IsOptional")?.Value ?? "false"),
                                                                         isBought: bool.Parse(product.Element("IsBought")?.Value ?? "false")
                                                                     ))
-                                                                    .Where(c => c.IsBought == false)
-                                                                    .OrderBy(p => p.Category)
-                                                                    .ToList();
+                                                                    .Where(c => c.IsBought == false);
+
+        var sortedProducts = unSortedProducts;
+
+        switch (SortingPicker.SelectedIndex)
+        {
+            case 0:
+                sortedProducts = unSortedProducts.OrderBy(c => c.Category);
+                break;
+            case 1:
+                sortedProducts = unSortedProducts.OrderBy(c => c.Name);
+                break;
+            case 2:
+                sortedProducts = unSortedProducts.OrderBy(c => c.Count);
+                break;
+        }
+
+        var products = sortedProducts.ToList();
 
         ProductsStackLayout.Children.Clear();
 

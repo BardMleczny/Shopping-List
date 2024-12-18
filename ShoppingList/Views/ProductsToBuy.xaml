@@ -17,8 +17,27 @@
                FontAttributes="Bold"
                HorizontalOptions="Center"
                TextColor="#333333" />
+            <HorizontalStackLayout Spacing="15" VerticalOptions="Start">
+                <Picker x:Name="SortingPicker" 
+                    Title="Sort by:" 
+                    HorizontalTextAlignment="Center"
+                    BackgroundColor="White"
+                    FontSize="16"
+                    TextColor="#333333"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    Margin="30,0,0,0"
+                    SelectedIndex="0"
+                    SelectedIndexChanged="OnSortingChanged">
+                    <Picker.Items>
+                        <x:String>Category</x:String>
+                        <x:String>Name</x:String>
+                        <x:String>Count</x:String>
+                    </Picker.Items>
+                </Picker>
+            </HorizontalStackLayout>
 
-        <StackLayout x:Name="ProductsStackLayout" Padding="10">
+            <StackLayout x:Name="ProductsStackLayout" Padding="10">
             <Label Text="Your shopping list is empty."
                        FontSize="18"
                        TextColor="#666666"

@@ -17,10 +17,16 @@ public partial class ProductsFromShop : ContentPage
         await Shell.Current.GoToAsync(nameof(AddProduct));
     }
 
-    private void OnFilterClicked(object sender, EventArgs e)
+    private void OnShopChanged(object sender, EventArgs e)
     {
         LoadProducts();
     }
+
+    private void OnSortingChanged(object sender, EventArgs e)
+    {
+        LoadProducts();
+    }
+    
 
     private void LoadShopSelection()
     {
@@ -36,7 +42,7 @@ public partial class ProductsFromShop : ContentPage
     {
         string shop = ShopPicker.SelectedItem == null ? "" : ShopPicker.SelectedItem.ToString();
 
-        var products = XDocument.Load(FileChoice.productsFilePath).Descendants("Product")
+        var unSortedProducts = XDocument.Load(FileChoice.productsFilePath).Descendants("Product")
                                                                     .Select(product => new Product(
                                                                         name: product.Element("Name")?.Value,
                                                                         value: float.Parse(product.Element("Value")?.Value ?? "0"),
@@ -46,9 +52,24 @@ public partial class ProductsFromShop : ContentPage
                                                                         isOptional: bool.Parse(product.Element("IsOptional")?.Value ?? "false"),
                                                                         isBought: bool.Parse(product.Element("IsBought")?.Value ?? "false")
                                                                     ))
-                                                                    .Where(c => c.Shop == shop)
-                                                                    .OrderBy(p => p.Category)
-                                                                    .ToList();
+                                                                    .Where(c => c.Shop == shop);
+
+        var sortedProducts = unSortedProducts;
+
+        switch(SortingPicker.SelectedIndex)
+        {
+            case 0:
+                sortedProducts = unSortedProducts.OrderBy(c => c.Category);
+                break; 
+            case 1:
+                sortedProducts = unSortedProducts.OrderBy(c => c.Name);
+                break;
+            case 2:
+                sortedProducts = unSortedProducts.OrderBy(c => c.Count);
+                break;
+        }
+
+        var products = sortedProducts.ToList();
 
         ProductsStackLayout.Children.Clear();
 

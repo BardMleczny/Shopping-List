@@ -20,16 +20,25 @@
                         FontSize="16"
                         TextColor="#333333"
                         HorizontalOptions="FillAndExpand"
-                        VerticalOptions="Center" />
-
-                <Button Text="Filter"
-                        Clicked="OnFilterClicked"
-                        BackgroundColor="#4CAF50"
-                        TextColor="White"
-                        CornerRadius="10"
-                        Padding="10"
+                        VerticalOptions="Center"
+                        Margin="10,10,40,0"
+                        SelectedIndexChanged="OnShopChanged" />
+                <Picker x:Name="SortingPicker" 
+                        Title="Sort by:" 
+                        HorizontalTextAlignment="Center"
+                        BackgroundColor="White"
                         FontSize="16"
-                        VerticalOptions="Center" />
+                        TextColor="#333333"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"
+                        SelectedIndex="0"
+                        SelectedIndexChanged="OnSortingChanged">
+                    <Picker.Items>
+                        <x:String>Category</x:String>
+                        <x:String>Name</x:String>
+                        <x:String>Count</x:String>
+                    </Picker.Items>
+                </Picker>
             </HorizontalStackLayout>
 
             <StackLayout x:Name="ProductsStackLayout" Padding="10">
