@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|c:\\users\\dominik\\documents\\github\\shopping-list\\shoppinglist\\views\\categorycontentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\views\\categorycontentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|c:\\users\\dominik\\documents\\github\\shopping-list\\shoppinglist\\views\\productitemview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\views\\productitemview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|c:\\users\\dominik\\documents\\github\\shopping-list\\shoppinglist\\views\\productstobuy.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\views\\productstobuy.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -29,14 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|c:\\users\\dominik\\documents\\github\\shopping-list\\shoppinglist\\views\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\views\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|c:\\users\\dominik\\documents\\github\\shopping-list\\shoppinglist\\views\\productitemview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\views\\productitemview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|c:\\users\\dominik\\documents\\github\\shopping-list\\shoppinglist\\views\\categorycontentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|solutionrelative:shoppinglist\\views\\categorycontentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CD9CD53-66C2-4D99-9358-3A5BF7A1FCA6}|ShoppingList\\ShoppingList.csproj|c:\\users\\dominik\\documents\\github\\shopping-list\\shoppinglist\\views\\allproducts.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ProductsToBuy.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\ProductsToBuy.xaml.cs",
               "RelativeDocumentMoniker": "ShoppingList\\Views\\ProductsToBuy.xaml.cs",
@@ -86,8 +86,7 @@
               "RelativeToolTip": "ShoppingList\\Views\\ProductsToBuy.xaml.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAwBYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T18:23:32.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T18:23:32.589Z"
             },
             {
               "$type": "Document",
@@ -103,13 +102,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "ProductItemView.xaml",
               "DocumentMoniker": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\ProductItemView.xaml",
               "RelativeDocumentMoniker": "ShoppingList\\Views\\ProductItemView.xaml",
               "ToolTip": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\ProductItemView.xaml",
               "RelativeToolTip": "ShoppingList\\Views\\ProductItemView.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-18T14:44:15.446Z",
               "EditorCaption": ""
@@ -128,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "AddProduct.xaml",
               "DocumentMoniker": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\AddProduct.xaml",
               "RelativeDocumentMoniker": "ShoppingList\\Views\\AddProduct.xaml",
@@ -136,12 +135,11 @@
               "RelativeToolTip": "ShoppingList\\Views\\AddProduct.xaml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAADwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-18T14:36:12.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T14:36:12.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "CategoryContentView.xaml",
               "DocumentMoniker": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\CategoryContentView.xaml",
               "RelativeDocumentMoniker": "ShoppingList\\Views\\CategoryContentView.xaml",
@@ -149,11 +147,12 @@
               "RelativeToolTip": "ShoppingList\\Views\\CategoryContentView.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-18T14:36:10.296Z"
+              "WhenOpened": "2024-12-18T14:36:10.296Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ProductsFromShop.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\ProductsFromShop.xaml.cs",
               "RelativeDocumentMoniker": "ShoppingList\\Views\\ProductsFromShop.xaml.cs",
@@ -161,31 +160,30 @@
               "RelativeToolTip": "ShoppingList\\Views\\ProductsFromShop.xaml.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAgwBgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:35:18.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T14:35:18.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ProductsToBuy.xaml",
               "DocumentMoniker": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\ProductsToBuy.xaml",
               "RelativeDocumentMoniker": "ShoppingList\\Views\\ProductsToBuy.xaml",
               "ToolTip": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\ProductsToBuy.xaml",
               "RelativeToolTip": "ShoppingList\\Views\\ProductsToBuy.xaml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-18T14:35:07.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProductsFromShop.xaml",
               "DocumentMoniker": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\ProductsFromShop.xaml",
               "RelativeDocumentMoniker": "ShoppingList\\Views\\ProductsFromShop.xaml",
               "ToolTip": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\ProductsFromShop.xaml",
               "RelativeToolTip": "ShoppingList\\Views\\ProductsFromShop.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACIAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-18T14:33:16.319Z",
               "EditorCaption": ""
@@ -200,12 +198,11 @@
               "RelativeToolTip": "ShoppingList\\Views\\AllProducts.xaml",
               "ViewState": "AgIAACEAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-18T14:33:03.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T14:33:03.162Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "FileChoice.xaml",
               "DocumentMoniker": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\FileChoice.xaml",
               "RelativeDocumentMoniker": "ShoppingList\\Views\\FileChoice.xaml",
@@ -213,8 +210,7 @@
               "RelativeToolTip": "ShoppingList\\Views\\FileChoice.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-18T14:31:55.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T14:31:55.21Z"
             },
             {
               "$type": "Document",
@@ -230,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AddProduct.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Dominik\\Documents\\GitHub\\Shopping-List\\ShoppingList\\Views\\AddProduct.xaml.cs",
               "RelativeDocumentMoniker": "ShoppingList\\Views\\AddProduct.xaml.cs",
@@ -238,8 +234,7 @@
               "RelativeToolTip": "ShoppingList\\Views\\AddProduct.xaml.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAowE8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:17:25.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T14:17:25.272Z"
             },
             {
               "$type": "Document",
